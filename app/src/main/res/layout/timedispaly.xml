@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:padding="20dp"
+    android:layout_marginStart="70dp"
+    android:elevation="50dp"
+    android:background="@color/blue_prime"
+    android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_access_time_24"
+            android:contentDescription="@string/set_time"
+            android:layout_margin="18dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/recycle_time"
+            android:layout_height="wrap_content"
+            android:text="@string/_9_00_am"
+            android:textSize="30sp"
+            android:layout_margin="18dp"
+            android:textColor="@color/white"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

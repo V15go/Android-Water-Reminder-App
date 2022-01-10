@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/light_blue"
+    android:layout_height="match_parent"
+    tools:context=".home_page">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/cabin_sketch"
+        android:text="@string/water_reminder"
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomnavi"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="70dp"
+
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/bag"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Base.CardView"
+            android:id="@+id/refer4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/hello1"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/user_name"
+            style="@style/Base.CardView"
+            android:layout_below="@+id/refer4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="170dp"
+            android:text="@string/name"
+            android:textSize="30sp" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="150dp"
+            android:id="@+id/refer"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/total_water"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottle"
+                android:gravity="center"
+                android:text="@string/wat"
+
+
+                android:textSize="40sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/undo_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:background="@drawable/undo_button"
+                    android:text="@string/undo"
+
+
+                    />
+
+                <Button
+                    android:id="@+id/add_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="65dp"
+                    android:background="@drawable/add_bt"
+                    android:text="@string/add"
+
+
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/refer2"
+            android:layout_below="@+id/refer"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30sp"
+                android:layout_marginTop="16sp"
+                android:text="@string/today_left_for_the_goal"
+
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65sp"
+                android:layout_marginTop="16sp"
+                android:text="@string/goal_for_today"
+                android:textColor="#000000" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/refer2"
+            android:id="@+id/refer3"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/left_water"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/no"
+                android:textSize="24sp"
+
+                />
+
+            <TextView
+                android:id="@+id/goal_view"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="180sp"
+                android:layout_marginTop="16sp"
+                android:text="@string/no"
+                android:textSize="24sp"
+
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_margin="16dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+
+
+            android:layout_below="@+id/refer3"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/_1_cup_is_equal_to_1_2_liter_of_water"
+            android:textColor="#000000" />
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomnavi"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_menu_water"
+        android:background="@drawable/menu_selection_rounded"
+        android:elevation="16dp"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        />
+
+
+</RelativeLayout>

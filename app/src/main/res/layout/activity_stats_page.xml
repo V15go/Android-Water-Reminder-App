@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_prime"
+    tools:context=".stats_page">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+
+
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/cabin_sketch"
+        android:text="@string/reminders"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/rect134"
+        android:orientation="vertical"
+        android:elevation="15dp"
+
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:id="@+id/time_keeper"
+
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/add_time"
+            android:layout_marginStart="150dp"
+            android:src="@drawable/ic_baseline_add_alarm_24"
+            android:contentDescription="@string/no" />
+
+    </RelativeLayout>
+
+
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomnavi"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/menu_selection_rounded"
+            android:elevation="16dp"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:menu="@menu/bottom_menu_water"
+            />
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
