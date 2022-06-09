@@ -43,6 +43,8 @@ public class home_page extends AppCompatActivity {
     private FirebaseDatabase firebaseDatabase;
     static double water = 0;
     private DatabaseReference reference;
+    SharedPreferences sharedPreferences ;
+    SharedPreferences sharedPreferences2 ;
     private FirebaseUser user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -143,13 +145,11 @@ public class home_page extends AppCompatActivity {
 
 
 
-                                    Intent intent = new Intent(home_page.this,home_page.class);
-                                    startActivity(intent);
                                 }
                             }).show();
                 }
 
-                SharedPreferences sharedPreferences = getSharedPreferences(SHARED,MODE_PRIVATE);
+                sharedPreferences = getSharedPreferences(SHARED,MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString(goal_view.getText().toString(),total_water.getText().toString());
                 editor.putString(goal_view.getText().toString(),left_water.getText().toString());
@@ -166,8 +166,15 @@ public class home_page extends AppCompatActivity {
             public void onClick(View v) {
                 int water = Integer.parseInt(total_water.getText().toString());
                 water+=1;
-                left_water.setText(water);
-                total_water.setText(water);
+               sharedPreferences2 = getSharedPreferences(SHARED,MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences2.edit();
+                editor.putString(goal_view.getText().toString(),total_water.getText().toString());
+                editor.putString(goal_view.getText().toString(),left_water.getText().toString());
+
+                String res = "";
+                res += water;
+                total_water.setText(res);
+                left_water.setText(res);
             }
         });
 
